@@ -3,7 +3,6 @@
 exports[`Search renders correctly 1`] = `
 <input
   className="searchInput"
-  onBlur={[Function]}
   onChange={[Function]}
   onKeyDown={[Function]}
   placeholder="Search"

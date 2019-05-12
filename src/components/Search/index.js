@@ -14,7 +14,6 @@ class Search extends Component {
            <input type = 'text' 
            onKeyDown = {this.onKeyDown}
            onChange={this.onChange}
-           onBlur = {this.updateValue}
            placeholder='Search'
            className="searchInput"
            />
