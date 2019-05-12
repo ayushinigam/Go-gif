@@ -1,0 +1,14 @@
+.searchInput {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background: #F0F0F0;
+    width: 100%;
+    padding: 10px; 
+    margin: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    color: #606060;
+    font-weight: 500;
+}
