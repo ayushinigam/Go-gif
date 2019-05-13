@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Go-gif/static/css/main.8ae6f588.chunk.css",
+    "main.js": "/Go-gif/static/js/main.486fa0d0.chunk.js",
+    "main.js.map": "/Go-gif/static/js/main.486fa0d0.chunk.js.map",
+    "runtime~main.js": "/Go-gif/static/js/runtime~main.52789bff.js",
+    "runtime~main.js.map": "/Go-gif/static/js/runtime~main.52789bff.js.map",
+    "static/js/2.52333434.chunk.js": "/Go-gif/static/js/2.52333434.chunk.js",
+    "static/js/2.52333434.chunk.js.map": "/Go-gif/static/js/2.52333434.chunk.js.map",
+    "index.html": "/Go-gif/index.html",
+    "precache-manifest.fcb3335cbb9d83e990a9c1535b49a317.js": "/Go-gif/precache-manifest.fcb3335cbb9d83e990a9c1535b49a317.js",
+    "service-worker.js": "/Go-gif/service-worker.js",
+    "static/css/main.8ae6f588.chunk.css.map": "/Go-gif/static/css/main.8ae6f588.chunk.css.map",
+    "static/media/appLogo.png": "/Go-gif/static/media/appLogo.15c492c6.png",
+    "static/media/pause.svg": "/Go-gif/static/media/pause.ca47aee8.svg",
+    "static/media/play.svg": "/Go-gif/static/media/play.fd3f2017.svg"
+  }
+}
