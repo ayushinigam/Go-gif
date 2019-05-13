@@ -1,14 +1,5 @@
 .appContainer {
   display: flex;
   flex-direction: column;
-  padding: 30px 60px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 30px 60px;
 }

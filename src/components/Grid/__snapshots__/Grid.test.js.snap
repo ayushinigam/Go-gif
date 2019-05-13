@@ -1,37 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders correctly 1`] = `
+exports[`Grid renders correctly 1`] = `
 <div
   className="gridContainer"
 >
-  <div
-    className="imageContainer"
-    onClick={[Function]}
-  >
-    <img
-      className="imageControl"
-      src={
-        Object {
-          "ReactComponent": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          },
-          "__esModule": true,
-          "default": "play.svg",
-        }
-      }
-    />
-    <img
-      className="gifImage"
-      height={10}
-      src="test/still"
+  <div>
+    <div
+      className="imageContainer"
+      onClick={[Function]}
       style={
         Object {
-          "backgroundColor": "pink",
+          "margin": "10px",
         }
       }
-      width={10}
-    />
+    >
+      <img
+        className="imageControl"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "play.svg",
+          }
+        }
+      />
+      <img
+        className="gifImage"
+        height={904}
+        src="test/still"
+        width={884}
+      />
+    </div>
   </div>
 </div>
 `;

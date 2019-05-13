@@ -1,5 +1,14 @@
+.imageContainer {
+    position: relative;
+    cursor: pointer;
+}
+
+.imageContainer:hover .imageControl {
+    display: inline;
+}
+
 .imageControl {
-    height: 8vh;
+    width: 20%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -8,11 +17,6 @@
     opacity: 0.8;
 }
 
-.imageContainer {
-    position: relative;
-    cursor: pointer;
-}
-
-.imageContainer:hover .imageControl {
-    display: inline;
+.gifImage {
+    background-color: rgba(97, 177, 190, 0.5);
 }

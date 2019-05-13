@@ -1,36 +1,45 @@
-import React from 'react';
-import Search from '../Search';
-import './App.css';
+import React, {Component} from 'react';
+import { formatGiphyData, initialiseDataArray, isScrollBottom } from '../../utils/common.utils';
 import { getGif } from '../../utils/api.utils';
-import { formatData } from '../../utils/common.utils';
+import Search from '../Search';
 import Grid from '../Grid';
-
-class App extends React.Component {
+import Header from '../Header';
+import './App.css';
+class App extends Component {
     state = {
         searchValue: '',
         apiCallCount: 0,
-        gridData: []
+        gridData: [],
+        isPlayingAll: false
     }
-    callGetGif = (value = '') => {
-      const {searchValue, apiCallCount} = this.state;
-      getGif(value || searchValue, apiCallCount).then((response) => {      
-        this.setState({
-          gridData: formatData(response.data),
-          apiCallCount: apiCallCount + 1
-        });
-      })
+    componentDidMount() {
+      this.setState({gridData: initialiseDataArray()});
+      window.addEventListener('scroll', this.onScroll, false);
     }
-    updateSearchValue = (value) => {
-        this.setState({searchValue: value, apiCallCount: 0});
-        this.callGetGif(value);
+    onScroll = () => isScrollBottom() && this.callGetGif();
+    callGetGif = () => {
+      const {searchValue, apiCallCount, gridData} = this.state;
+      getGif(searchValue, apiCallCount)
+      .then((response) => {
+        const formattedData = formatGiphyData(response.data, gridData)
+        this.setState({gridData: formattedData,apiCallCount: apiCallCount + 1});
+      });
+    }
+    updateSearchValue = async (value) => {
+        await this.setState({searchValue: value, apiCallCount: 0, gridData: initialiseDataArray()});
+        this.callGetGif();
+    }
+    togglePlayingState = () => this.setState({isPlayingAll: !this.state.isPlayingAll});
+    componentWillUnmount() {
+      window.removeEventListener('scroll', this.onScroll, false);
     }
 render() {
-  console.log(this.state);
-  
+  const {isPlayingAll, gridData} = this.state;
   return (
     <div className="appContainer">
+      <Header togglePlayingState={this.togglePlayingState} isPlayingAll={isPlayingAll}/>
       <Search updateSearchValue={this.updateSearchValue}/>
-      <Grid gridData={this.state.gridData}/>
+      <Grid gridData={this.state.gridData} isPlayingAll={isPlayingAll}/>
     </div>
   );
 }

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div
+  className="headerContainer"
+>
+  <img
+    className="appLogo"
+    src="appLogo.png"
+  />
+  <div
+    className="controlsContainer"
+    onClick={[Function]}
+  >
+    Play All
+  </div>
+</div>
+`;

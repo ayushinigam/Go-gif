@@ -4,6 +4,20 @@ exports[`App renders correctly 1`] = `
 <div
   className="appContainer"
 >
+  <div
+    className="headerContainer"
+  >
+    <img
+      className="appLogo"
+      src="appLogo.png"
+    />
+    <div
+      className="controlsContainer"
+      onClick={[Function]}
+    >
+      Play All
+    </div>
+  </div>
   <input
     className="searchInput"
     onChange={[Function]}
@@ -13,6 +27,11 @@ exports[`App renders correctly 1`] = `
   />
   <div
     className="gridContainer"
-  />
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
 </div>
 `;

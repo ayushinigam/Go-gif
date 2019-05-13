@@ -1,0 +1,22 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.appLogo {
+    width: 60px;
+}
+
+.controlsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.controlsText {
+    color: grey;
+    font-size: 18px;
+    padding-right: 20px;
+}
