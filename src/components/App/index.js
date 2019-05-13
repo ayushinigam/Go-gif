@@ -10,7 +10,8 @@ class App extends Component {
         searchValue: '',
         apiCallCount: 0,
         gridData: [],
-        isPlayingAll: false
+        isPlayingAll: false,
+        noGIf: false
     }
     componentDidMount() {
       this.setState({gridData: initialiseDataArray()});
@@ -21,9 +22,13 @@ class App extends Component {
       const {searchValue, apiCallCount, gridData} = this.state;
       getGif(searchValue, apiCallCount)
       .then((response) => {
-        const formattedData = formatGiphyData(response.data, gridData)
-        this.setState({gridData: formattedData,apiCallCount: apiCallCount + 1});
-      });
+        if(response.data.length) {
+          const formattedData = formatGiphyData(response.data, gridData)
+          this.setState({gridData: formattedData,apiCallCount: apiCallCount + 1});
+        } else {
+          this.setState({noGIf: true});
+        }
+      })
     }
     updateSearchValue = async (value) => {
         await this.setState({searchValue: value, apiCallCount: 0, gridData: initialiseDataArray()});
@@ -34,12 +39,15 @@ class App extends Component {
       window.removeEventListener('scroll', this.onScroll, false);
     }
 render() {
-  const {isPlayingAll, gridData} = this.state;
+  const {isPlayingAll, noGIf} = this.state;
   return (
     <div className="appContainer">
       <Header togglePlayingState={this.togglePlayingState} isPlayingAll={isPlayingAll}/>
       <Search updateSearchValue={this.updateSearchValue}/>
-      <Grid gridData={this.state.gridData} isPlayingAll={isPlayingAll}/>
+      {!noGIf ? <Grid gridData={this.state.gridData} isPlayingAll={isPlayingAll}/>
+      : <div className="noGifMessage"> No gif found! 😔 </div>
+      }
+
     </div>
   );
 }
