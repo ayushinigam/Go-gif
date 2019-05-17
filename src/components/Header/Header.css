@@ -4,19 +4,39 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 0;
+    flex-wrap: wrap;
 }
 
 .appLogo {
     width: 60px;
 }
 
-.controlsContainer {
+.controlContainer {
     display: flex;
     flex-direction: row;
 }
 
-.controlsText {
-    color: grey;
+.controlButton {
+    color: #606060;
     font-size: 18px;
     padding-right: 20px;
+    cursor: pointer;
+    align-self: center;
+    padding: 5px 10px;
+}
+
+.controlButton:hover {
+    background: #F0F0F0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-weight: 500;
 }

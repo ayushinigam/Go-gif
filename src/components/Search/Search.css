@@ -1,3 +1,12 @@
+.searchContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+    flex: 1 0 0;
+}
+
 .searchInput {
     display: flex; 
     justify-content: center; 
@@ -9,4 +18,11 @@
     color: #606060;
     font-weight: 500;
     font-size: 20px;
+    flex-grow: 1;
+}
+
+.searchIcon {
+    cursor: pointer;
+    width: 30px;
+    padding-left: 10px;
 }

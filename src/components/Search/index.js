@@ -11,12 +11,16 @@ class Search extends Component {
     updateValue = () => this.props.updateSearchValue(this.state.value);
    render() {       
        return (
-           <input type = 'text' 
-           onKeyDown = {this.onKeyDown}
-           onChange={this.onChange}
-           placeholder='Search'
-           className="searchInput"
-           />
+           <div className='searchContainer'>
+            <input type = 'text' 
+            onKeyDown = {this.onKeyDown}
+            onChange={this.onChange}
+            placeholder='Search'
+            className="searchInput"
+            disabled={this.props.disabled}
+            />
+           <span><img className="searchIcon" src={require(`../../assets/search.svg`)} alt="search" onClick={this.updateValue}/></span>
+           </div>
        )
    }
 }
