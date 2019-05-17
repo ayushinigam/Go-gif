@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {GIF_PADDING} from '../../constants';
 import './Gif.css';
 
-class Gif extends React.Component {
+class Gif extends Component {
    state = {
        isPlaying: this.props.isPlayingAll,
        cachedProp: this.props.isPlayingAll
@@ -26,7 +26,7 @@ class Gif extends React.Component {
        const imageHeight = (currentImage.height/currentImage.width)*cellWidth;
        return (
         <div className="imageContainer" onClick={this.toggleGifPlaying} style={{margin: `${GIF_PADDING}px`}}>
-            <img className="imageControl" src={require(`../../assets/${iconName}.svg`)}/>
+            <img className="imageControl" src={require(`../../assets/${iconName}.svg`)} alt="play pause button"/>
             <img className='gifImage' src={currentImage.url} width={cellWidth-(GIF_PADDING*2)} height={imageHeight} alt={title}
             />
         </div>

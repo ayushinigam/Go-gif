@@ -7,7 +7,7 @@ class Grid extends Component {
 
     getGridColumn = (gridData, cellWidth) => 
          gridData.map((gridItemData) =>  
-         <Gif imageData={gridItemData} key={gridItemData.id} 
+         <Gif imageData={gridItemData} key={gridItemData.key} 
          cellWidth={cellWidth} isPlayingAll={this.props.isPlayingAll}
          />
     );
