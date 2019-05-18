@@ -36,6 +36,7 @@ class Gif extends Component {
                    href={`${WHATSAPP_SHARE_BASE_URL}${imageData.moving.url}`}
                    onClick={this.onShareClick}
                    target="_blank"
+                   rel="noopener noreferrer"
                >
                    <img className="whatsAppIcon" src={require("../../assets/whatsapp.svg")} alt="share on whatsapp" />
                </a>
@@ -45,14 +46,14 @@ class Gif extends Component {
 }
 
 Gif.defaultProps = {
-    imageData: [],
+    imageData: {},
     title: "",
     cellWidth: 10,
     isPlayingAll: false,
 };
 
 Gif.propTypes = {
-    imageData: PropTypes.array,
+    imageData: PropTypes.object,
     title: PropTypes.string,
     cellWidth: PropTypes.number,
     isPlayingAll: PropTypes.bool,

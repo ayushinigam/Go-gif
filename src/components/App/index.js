@@ -33,6 +33,7 @@ class App extends Component {
           apiCallCount, gridData, searchValue, apiCallInProgress,
       } = this.state;
       if (!apiCallInProgress) {
+        this.setState({apiCallInProgress: true});
           const apiPath = searchValue ? getSearchAPIPath(searchValue) : getTrendingAPIPath();
           callGiphyAPI(apiPath, apiCallCount)
               .then((response) => {
