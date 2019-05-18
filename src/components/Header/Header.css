@@ -7,7 +7,7 @@
     flex-wrap: wrap;
 }
 
-.logoContainer {
+.logoAndSearchContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,19 +16,18 @@
     flex-wrap: wrap;
 }
 
-.appLogo {
-    width: 60px;
-}
-
 .controlContainer {
     display: flex;
     flex-direction: row;
 }
 
+.appLogo {
+    width: 60px;
+}
+
 .controlButton {
     color: #606060;
     font-size: 18px;
-    padding-right: 20px;
     cursor: pointer;
     align-self: center;
     padding: 5px 10px;

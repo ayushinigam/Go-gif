@@ -7,24 +7,58 @@ exports[`App renders correctly 1`] = `
   <div
     className="headerContainer"
   >
-    <img
-      className="appLogo"
-      src="appLogo.png"
-    />
     <div
-      className="controlsContainer"
-      onClick={[Function]}
+      className="logoAndSearchContainer"
     >
-      Play All
+      <img
+        alt="app logo"
+        className="appLogo"
+        src="appLogo.png"
+      />
+      <div
+        className="searchContainer"
+      >
+        <input
+          className="searchInput"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <img
+          alt="search"
+          className="searchIcon"
+          onClick={[Function]}
+          src={
+            Object {
+              "ReactComponent": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "render": [Function],
+              },
+              "__esModule": true,
+              "default": "search.svg",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="controlContainer"
+    >
+      <div
+        className="controlButton"
+        onClick={[Function]}
+      >
+        Trending
+      </div>
+      <div
+        className="controlButton"
+        onClick={[Function]}
+      >
+        Play All
+      </div>
     </div>
   </div>
-  <input
-    className="searchInput"
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder="Search"
-    type="text"
-  />
   <div
     className="gridContainer"
   >

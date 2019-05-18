@@ -1,5 +1,4 @@
-import {MIN_WIDTH_DESKTOP, MAX_WIDTH_DESKTOP, SCROLL_OFFSET} from '../constants';
-
+import {MIN_WIDTH_DESKTOP, MAX_WIDTH_DESKTOP, SCROLL_OFFSET, APP_MARGIN_HORIZONTAL} from '../constants';
 /**
  * getNoOfColumns: returns the no of columns based on the screen viewport width
  */
@@ -50,4 +49,4 @@ export const formatGiphyData = (dataFromGiphyAPI = [], gridData) => {
 }
 
 export const isScrollBottom = () => (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - SCROLL_OFFSET);
-export const getCellWidth = (gridLength) => ((window.innerWidth-120) / gridLength);
+export const getCellWidth = (gridLength) => ((window.innerWidth-(2*APP_MARGIN_HORIZONTAL)) / gridLength);

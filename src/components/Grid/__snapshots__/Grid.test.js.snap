@@ -15,6 +15,7 @@ exports[`Grid renders correctly 1`] = `
       }
     >
       <img
+        alt="play pause button"
         className="imageControl"
         src={
           Object {

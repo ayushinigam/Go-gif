@@ -7,7 +7,7 @@ describe(('Grid'), () => {
         { data: [{
             moving: {height: 10, width: 10, url: 'test/moving'},
             still: {height: 10, width: 10, url: 'test/still'},
-            id: '1'
+            key: '1'
             }], 
         totalHeight: 10
         }

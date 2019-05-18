@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { formatGiphyData, initialiseDataArray, isScrollBottom, throttle } from '../../utils/common.utils';
+import { formatGiphyData, initialiseDataArray, isScrollBottom } from '../../utils/common.utils';
 import { callGiphyAPI } from '../../utils/api.utils';
 import Search from '../Search';
 import Grid from '../Grid';
@@ -11,41 +11,41 @@ class App extends Component {
         apiCallCount: 0,
         gridData: [],
         isPlayingAll: false,
-        noGIf: false
+        noGIf: false,
+        apiCallInProgress: false
     }
-    componentDidMount = async () => {
-      this.initialiseState();
-      window.addEventListener('scroll', false);
+    componentDidMount = () => {
+      this.updateGiphyData();
+      window.addEventListener('scroll', this.onScroll,false);
     }
-    initialiseState = async(searchValue = '') => {
+    updateGiphyData = async (searchValue = '') => {
       await this.setState({searchValue, apiCallCount: 0, gridData: initialiseDataArray()});
-      await this.getGif();
+      await this.getGiphyData();
     }
-    onScroll = () => isScrollBottom() && this.getGif();
-    getGif = () => {
-      const {apiCallCount, gridData, searchValue} = this.state;
-      callGiphyAPI(searchValue, apiCallCount)
-      .then((response) => {
-        if(response.data.length) {
-          const formattedData = formatGiphyData(response.data, gridData)
-          this.setState({gridData: formattedData, apiCallCount: apiCallCount + 1});
-        } else {
-          this.setState({noGIf: true})
-        }
-      });
+    onScroll = () => isScrollBottom() && this.getGiphyData();
+    getGiphyData = () => {
+      const {apiCallCount, gridData, searchValue, apiCallInProgress} = this.state;
+      if(!apiCallInProgress) {
+        this.setState({apiCallInProgress: true});
+        callGiphyAPI(searchValue, apiCallCount)
+          .then((response) => {
+            const formattedData = formatGiphyData(response.data, gridData)
+            this.setState({gridData: formattedData, apiCallCount: apiCallCount + 1, apiCallInProgress: false, noGIf: !response.data.length});
+          }).catch(() => this.setState({apiCallInProgress: false}))
+      }
     }
     togglePlayingState = () => this.setState({isPlayingAll: !this.state.isPlayingAll});
     componentWillUnmount = () => {
       window.removeEventListener('scroll', this.onScroll, false);
     }
 render() {
-  const {isPlayingAll, noGIf} = this.state;
+  const {isPlayingAll, noGIf, gridData} = this.state;
   return (
     <div className="appContainer">
-      <Header togglePlayingState={this.togglePlayingState} isPlayingAll={isPlayingAll} getTrendingGif={this.initialiseState}>
-        <Search updateSearchValue={this.initialiseState}/>
+      <Header togglePlayingState={this.togglePlayingState} isPlayingAll={isPlayingAll} getTrendingGif={this.updateGiphyData}>
+        <Search updateSearchValue={this.updateGiphyData}/>
       </Header>
-      { !noGIf ? <Grid gridData={this.state.gridData} isPlayingAll={isPlayingAll}/>
+      { !noGIf ? <Grid gridData={gridData} isPlayingAll={isPlayingAll}/>
       : <div className="noGifMessage"> No gif found! :) </div>
       }
 

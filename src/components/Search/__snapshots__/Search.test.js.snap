@@ -1,11 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search renders correctly 1`] = `
-<input
-  className="searchInput"
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  placeholder="Search"
-  type="text"
-/>
+<div
+  className="searchContainer"
+>
+  <input
+    className="searchInput"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Search"
+    type="text"
+  />
+  <img
+    alt="search"
+    className="searchIcon"
+    onClick={[Function]}
+    src={
+      Object {
+        "ReactComponent": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        },
+        "__esModule": true,
+        "default": "search.svg",
+      }
+    }
+  />
+</div>
 `;

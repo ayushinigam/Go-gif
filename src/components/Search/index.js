@@ -19,7 +19,7 @@ class Search extends Component {
             className="searchInput"
             disabled={this.props.disabled}
             />
-           <span><img className="searchIcon" src={require(`../../assets/search.svg`)} alt="search" onClick={this.updateValue}/></span>
+           <img className="searchIcon" src={require(`../../assets/search.svg`)} alt="search" onClick={this.updateValue}/>
            </div>
        )
    }

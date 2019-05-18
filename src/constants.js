@@ -6,4 +6,5 @@ export const MAX_WIDTH_DESKTOP = 1600;
 export const SCROLL_OFFSET = 200;
 export const GIF_PADDING = 10;
 export const SEARCH_PATH = 'search?q=';
-export const TRENDING_PATH = 'trending'
+export const TRENDING_PATH = 'trending';
+export const APP_MARGIN_HORIZONTAL = 60;

@@ -23,11 +23,12 @@ class Gif extends Component {
        const {imageData, title, cellWidth} = this.props;
        const iconName = isPlaying ? 'pause': 'play';
        const currentImage = isPlaying ? imageData.moving : imageData.still;
+       const imageWidth = cellWidth - (GIF_PADDING*2);
        const imageHeight = (currentImage.height/currentImage.width)*cellWidth;
        return (
         <div className="imageContainer" onClick={this.toggleGifPlaying} style={{margin: `${GIF_PADDING}px`}}>
             <img className="imageControl" src={require(`../../assets/${iconName}.svg`)} alt="play pause button"/>
-            <img className='gifImage' src={currentImage.url} width={cellWidth-(GIF_PADDING*2)} height={imageHeight} alt={title}
+            <img className='gifImage' src={currentImage.url} width={imageWidth} height={imageHeight} alt={title}
             />
         </div>
        )
