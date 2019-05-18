@@ -11,7 +11,7 @@ class Search extends Component {
     updateValue = () => this.props.updateSearchValue(this.state.value);
    render() {       
        return (
-           <div className='searchContainer'>
+                <div className='searchContainer'>
             <input type = 'text' 
             onKeyDown = {this.onKeyDown}
             onChange={this.onChange}

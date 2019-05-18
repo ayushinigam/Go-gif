@@ -30,9 +30,9 @@ exports[`Grid renders correctly 1`] = `
       />
       <img
         className="gifImage"
-        height={1024}
+        height={1004}
         src="test/still"
-        width={1004}
+        width={984}
       />
       <a
         className="share"

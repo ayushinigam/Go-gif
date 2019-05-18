@@ -55,7 +55,7 @@ export const isScrollBottom = () => {
   const height = document.body.offsetHeight;
   return (window.innerHeight + window.scrollY) >= (height - SCROLL_OFFSET);
 };
-export const getCellWidth = gridLength => {
-    const appMargin = gridLength > 2 ? (2 * APP_MARGIN_HORIZONTAL) : 0;
-    return ((window.innerWidth - appMargin) / gridLength)
+export const getCellWidth = (gridLength) => {
+  const appMargin = gridLength > 2 ? (2 * APP_MARGIN_HORIZONTAL) : 20;
+  return ((window.innerWidth - appMargin) / gridLength);
 };
