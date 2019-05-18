@@ -3,7 +3,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 20px;
     flex-wrap: wrap;
 }
 
@@ -39,3 +38,15 @@
     border-radius: 5px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 768px) {
+    .headerContainer {
+        justify-content: center;
+    }
+    .controlContainer {
+        margin-top: 10px;
+    }
+    .appLogo {
+        margin-bottom: 5px;
+    }
+  }

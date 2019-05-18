@@ -29,8 +29,9 @@ class App extends Component {
         this.setState({apiCallInProgress: true});
         callGiphyAPI(searchValue, apiCallCount)
           .then((response) => {
+            const noGIf = !response.data.length && !apiCallCount;
             const formattedData = formatGiphyData(response.data, gridData)
-            this.setState({gridData: formattedData, apiCallCount: apiCallCount + 1, apiCallInProgress: false, noGIf: !response.data.length});
+            this.setState({gridData: formattedData, apiCallCount: apiCallCount + 1, apiCallInProgress: false, noGIf});
           }).catch(() => this.setState({apiCallInProgress: false}))
       }
     }
@@ -48,7 +49,6 @@ render() {
       { !noGIf ? <Grid gridData={gridData} isPlayingAll={isPlayingAll}/>
       : <div className="noGifMessage"> No gif found! :) </div>
       }
-
     </div>
   );
 }

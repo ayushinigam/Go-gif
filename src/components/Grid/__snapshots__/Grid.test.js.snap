@@ -30,10 +30,30 @@ exports[`Grid renders correctly 1`] = `
       />
       <img
         className="gifImage"
-        height={904}
+        height={1024}
         src="test/still"
-        width={884}
+        width={1004}
       />
+      <a
+        className="share"
+        href="https://wa.me/?text=test/moving"
+        onClick={[Function]}
+      >
+        <img
+          alt="share on whatsapp"
+          className="whatsAppIcon"
+          src={
+            Object {
+              "ReactComponent": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "render": [Function],
+              },
+              "__esModule": true,
+              "default": "whatsapp.svg",
+            }
+          }
+        />
+      </a>
     </div>
   </div>
 </div>

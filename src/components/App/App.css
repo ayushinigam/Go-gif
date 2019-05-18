@@ -9,3 +9,9 @@
   padding-top: 30px;
   font-size: 18px;
 }
+
+@media screen and (max-width: 768px) {
+  .appContainer {
+    margin: 0px;
+  }
+}
