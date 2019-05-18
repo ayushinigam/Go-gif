@@ -8,3 +8,4 @@ export const GIF_PADDING = 10;
 export const SEARCH_PATH = 'search?q=';
 export const TRENDING_PATH = 'trending';
 export const APP_MARGIN_HORIZONTAL = 60;
+export const WHATSAPP_SHARE_BASE_URL = 'https://wa.me/?text=';

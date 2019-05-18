@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {GIF_PADDING} from '../../constants';
+import {GIF_PADDING, WHATSAPP_SHARE_BASE_URL} from '../../constants';
 import './Gif.css';
 
 class Gif extends Component {
@@ -17,6 +17,7 @@ class Gif extends Component {
    }
 
    toggleGifPlaying = () => this.setState({isPlaying: !this.state.isPlaying});
+   onShareClick = (event) => event.stopPropagation(); 
 
    render() {
        const {isPlaying} = this.state;
@@ -28,8 +29,10 @@ class Gif extends Component {
        return (
         <div className="imageContainer" onClick={this.toggleGifPlaying} style={{margin: `${GIF_PADDING}px`}}>
             <img className="imageControl" src={require(`../../assets/${iconName}.svg`)} alt="play pause button"/>
-            <img className='gifImage' src={currentImage.url} width={imageWidth} height={imageHeight} alt={title}
-            />
+            <img className='gifImage' src={currentImage.url} width={imageWidth} height={imageHeight} alt={title}/>
+            <a className='share' href={`${WHATSAPP_SHARE_BASE_URL}${imageData.moving.url}`} onClick={this.onShareClick}>
+                <img className = 'whatsAppIcon' src={require(`../../assets/whatsapp.svg`)} alt="share on whatsapp"/>
+            </a>
         </div>
        )
    }

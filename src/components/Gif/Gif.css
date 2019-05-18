@@ -3,10 +3,6 @@
     cursor: pointer;
 }
 
-.imageContainer:hover .imageControl {
-    display: inline;
-}
-
 .imageControl {
     position: absolute;
     display: none;
@@ -17,10 +13,31 @@
     transform: translate(-50%, -50%);
 }
 
+.share {
+    position: absolute;
+    display: none;
+    width: 20%;
+    right: -10%;
+    top: 0%;
+    padding: 5px;
+}
+
+.whatsAppIcon {
+    width: 30px;
+}
+
 .gifImage {
     background-color: rgba(97, 177, 190, 0.5);
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
+}
+
+.imageContainer:hover .imageControl {
+    display: inline;
+}
+
+.imageContainer:hover .share {
+    display: inline;
 }
 
 
