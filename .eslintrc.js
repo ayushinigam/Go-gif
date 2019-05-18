@@ -1,26 +1,9 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    jest: true
-  },
-  extends: 'airbnb',
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-      jest: true
-    },
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  plugins: [
-    'react',
-  ],
-  rules: {
-    "max-len": ["error", 120]
-  },
-};
+  "extends": "react-app",
+  "rules" : {
+    "max-len": ["error", 120],
+    "quotes": ["error", "double"],
+    "indent": ["error", 4],
+    "react/jsx-no-target-blank": 0
+  }
+}

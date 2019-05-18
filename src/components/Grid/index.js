@@ -1,38 +1,39 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import {getCellWidth} from '../../utils/common.utils' 
-import Gif from '../Gif';
-import './Grid.css';
-class Grid extends Component {
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { getCellWidth } from "../../utils/common.utils";
+import Gif from "../Gif";
+import "./Grid.css";
 
-    getGridColumn = (gridData, cellWidth) => 
-         gridData.map((gridItemData) =>  
-         <Gif imageData={gridItemData} key={gridItemData.key} 
-         cellWidth={cellWidth} isPlayingAll={this.props.isPlayingAll}
-         />
-    );
+class Grid extends Component {
+    getGridColumn = (gridData, cellWidth) => gridData.map(gridItemData => (
+        <Gif
+            imageData={gridItemData}
+            key={gridItemData.key}
+            cellWidth={cellWidth}
+            isPlayingAll={this.props.isPlayingAll}
+        />
+    ));
 
     render() {
         const cellWidth = getCellWidth(this.props.gridData.length);
         const renderGrid = this.props.gridData.map((gridColumnData, index) => (
-            <div key={index}>{this.getGridColumn(gridColumnData.data, cellWidth)}</div>)
-        );
+            <div key={index}>{this.getGridColumn(gridColumnData.data, cellWidth)}</div>));
         return (
-            <div className='gridContainer'>
-                {renderGrid}    
+            <div className="gridContainer">
+                {renderGrid}
             </div>
-        )
+        );
     }
 }
 
 Grid.defaultProps = {
     gridData: [],
-    isPlayingAll: false
-}
+    isPlayingAll: false,
+};
 
 Grid.propTypes = {
     gridData: PropTypes.array,
-    isPlayingAll: PropTypes.bool
-}
+    isPlayingAll: PropTypes.bool,
+};
 
-export default Grid
+export default Grid;
