@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "367917f82d833490e82b6aa725969de5",
+    "revision": "b69f55f0088bf18c30570873cd866e34",
     "url": "/Go-gif/index.html"
   },
   {
-    "revision": "2ed7c65c0e96ca0ce627",
-    "url": "/Go-gif/static/css/main.4b39799c.chunk.css"
+    "revision": "24eebe904542e3d439ce",
+    "url": "/Go-gif/static/css/main.f6c46453.chunk.css"
   },
   {
-    "revision": "fdbb3078ce7bb367799d",
-    "url": "/Go-gif/static/js/2.0272be25.chunk.js"
+    "revision": "9f073638e03af79dacf9",
+    "url": "/Go-gif/static/js/2.f0107448.chunk.js"
   },
   {
-    "revision": "2ed7c65c0e96ca0ce627",
-    "url": "/Go-gif/static/js/main.e7e4e03b.chunk.js"
+    "revision": "24eebe904542e3d439ce",
+    "url": "/Go-gif/static/js/main.b9fea721.chunk.js"
   },
   {
     "revision": "2bfbbb4b9c7434035c3c",
@@ -34,5 +34,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "35fb3dd27a73313515ceb6c9b4dff0c3",
     "url": "/Go-gif/static/media/search.35fb3dd2.svg"
+  },
+  {
+    "revision": "fe7fa822c45da5de83fb0ee10e7b2843",
+    "url": "/Go-gif/static/media/whatsapp.fe7fa822.svg"
   }
 ]);

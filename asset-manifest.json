@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/Go-gif/static/css/main.4b39799c.chunk.css",
-    "main.js": "/Go-gif/static/js/main.e7e4e03b.chunk.js",
-    "main.js.map": "/Go-gif/static/js/main.e7e4e03b.chunk.js.map",
+    "main.css": "/Go-gif/static/css/main.f6c46453.chunk.css",
+    "main.js": "/Go-gif/static/js/main.b9fea721.chunk.js",
+    "main.js.map": "/Go-gif/static/js/main.b9fea721.chunk.js.map",
     "runtime~main.js": "/Go-gif/static/js/runtime~main.52789bff.js",
     "runtime~main.js.map": "/Go-gif/static/js/runtime~main.52789bff.js.map",
-    "static/js/2.0272be25.chunk.js": "/Go-gif/static/js/2.0272be25.chunk.js",
-    "static/js/2.0272be25.chunk.js.map": "/Go-gif/static/js/2.0272be25.chunk.js.map",
+    "static/js/2.f0107448.chunk.js": "/Go-gif/static/js/2.f0107448.chunk.js",
+    "static/js/2.f0107448.chunk.js.map": "/Go-gif/static/js/2.f0107448.chunk.js.map",
     "index.html": "/Go-gif/index.html",
-    "precache-manifest.aa8e091c1aa8e76e1038f718e4fe7d2d.js": "/Go-gif/precache-manifest.aa8e091c1aa8e76e1038f718e4fe7d2d.js",
+    "precache-manifest.034665d2216873d692d78d76ed5a0e62.js": "/Go-gif/precache-manifest.034665d2216873d692d78d76ed5a0e62.js",
     "service-worker.js": "/Go-gif/service-worker.js",
-    "static/css/main.4b39799c.chunk.css.map": "/Go-gif/static/css/main.4b39799c.chunk.css.map",
+    "static/css/main.f6c46453.chunk.css.map": "/Go-gif/static/css/main.f6c46453.chunk.css.map",
     "static/media/appLogo.png": "/Go-gif/static/media/appLogo.15c492c6.png",
     "static/media/pause.svg": "/Go-gif/static/media/pause.ca47aee8.svg",
     "static/media/play.svg": "/Go-gif/static/media/play.fd3f2017.svg",
-    "static/media/search.svg": "/Go-gif/static/media/search.35fb3dd2.svg"
+    "static/media/search.svg": "/Go-gif/static/media/search.35fb3dd2.svg",
+    "static/media/whatsapp.svg": "/Go-gif/static/media/whatsapp.fe7fa822.svg"
   }
 }
